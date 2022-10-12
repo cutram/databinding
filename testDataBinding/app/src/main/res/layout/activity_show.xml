@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+    <data>
+    <variable
+        name="showViewModel"
+        type="fpt.edu.testdatabinding.viewmodel.ShowViewModel" />
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="demo data"
+        android:textSize="30dp"
+        android:textColor="#FF0000"
+        android:gravity="center"/>
+    <EditText
+        android:text="@={showViewModel.showViewModel.name}"
+        android:id="@+id/edDemo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="nhập "
+        />
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="thong báo:"
+         android:textColor="#AA0000"
+         android:id="@+id/txtThongBao"
+         />
+    <Button
+        android:onClick="@{() -> showViewModel.onClickCheck(context)}"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="show"
+        android:id="@+id/btnShow"
+        />
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="show"
+        android:text="@{showViewModel.result}"
+        android:id="@+id/tvShow"
+        />
+</LinearLayout>
+</layout>

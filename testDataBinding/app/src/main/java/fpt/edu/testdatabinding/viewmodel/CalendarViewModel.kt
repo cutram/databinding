@@ -1,0 +1,1 @@
+package fpt.edu.testdatabinding.viewmodelimport android.content.Contextimport android.widget.Toastimport androidx.databinding.BaseObservableclass CalendarViewModel : BaseObservable() {    fun AddData(context: Context){        Toast.makeText(context, "New Data", Toast.LENGTH_SHORT).show()    }}
